@@ -2,24 +2,42 @@ import "./App.css";
 
 function App() {
   const sections = [
-    { title: "Main Section", buttons: ["Schedule", "Summary", "Recent list"] },
     {
-      title: "Component",
-      buttons: ["Child Component", "Child Component", "Child Component"],
+      id: "section-0",
+      title: "Main Section",
+      buttons: [
+        { id: "section-0-button-0", title: "Schedule" },
+        { id: "section-0-button-1", title: "Summary" },
+        { id: "section-0-button-2", title: "Recent list" },
+      ],
     },
     {
+      id: "section-1",
+      title: "Component",
+      buttons: [
+        { id: "section-1-button-0", title: "Child Component" },
+        { id: "section-1-button-1", title: "Child Component" },
+        { id: "section-1-button-0", title: "Child Component" },
+      ],
+    },
+    {
+      id: "section-2",
       title: "<main-section>",
-      buttons: ["<schedule>", "<summary>", "<recent-list>"],
+      buttons: [
+        { id: "section-2-button-0", title: "<schedule>" },
+        { id: "section-2-button-1", title: "<summary>" },
+        { id: "section-2-button-2", title: "<recent-list>" },
+      ],
     },
   ];
   return (
     <>
-      {sections.map((section, index) => (
-        <section className="sect" key={index}>
+      {sections.map((section) => (
+        <section className="sect" key={section.id}>
           <h1>{section.title}</h1>
-          {section.buttons.map((btn, idx) => (
-            <button className="btn" key={idx}>
-              {btn}
+          {section.buttons.map((button) => (
+            <button className="btn" key={button.id}>
+              {button.title}
             </button>
           ))}
         </section>
