@@ -19,6 +19,7 @@
   transform: scale(1.02);
 }
 .btn {
+  font-size: medium;
   font-weight: 700;
   border: 1px solid rgb(165, 66, 30);
   color: aliceblue;
