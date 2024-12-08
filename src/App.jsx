@@ -1,5 +1,6 @@
 import "./App.css";
-
+// Mush jan instead of using section tag and button tag here you need to create button and section components, then use it. button 
+// component should be a child of the Section component, and the Section component should be a child App component
 function App() {
   const sections = [
     {
